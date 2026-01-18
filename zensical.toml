@@ -1,11 +1,3 @@
-# ============================================================================
-#
-# The configuration produced by default is meant to highlight the features
-# that Zensical provides and to serve as a starting point for your own
-# projects.
-#
-# ============================================================================
-
 [project]
 
 # The site_name is shown in the page header and the browser window title
@@ -36,6 +28,12 @@ site_url = "https://dna-intricate.github.io/AdamFoflonker/"
 copyright = """
 Copyright &copy; 2026 Adam Foflonker
 """
+
+# The docs_dir setting specifies the path to the directory that contains your source files.
+# This must be a relative path, which is resolved relative to the configuration file.
+#
+# Read more: https://zensical.org/docs/setup/basics/#docs_dir
+docs_dir = "content/markdown"
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
 # If you decide not to define a navigation here then Zensical will simply

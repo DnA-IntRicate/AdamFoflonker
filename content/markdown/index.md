@@ -128,22 +128,6 @@ $$
     to configure it on all your pages if they are more Maths-heavy than these
     simple starter pages.
 
-<script id="MathJax-script" async src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [["\\(", "\\)"]],
-      displayMath: [["\\[", "\\]"]],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      ignoreHtmlClass: ".*|",
-      processHtmlClass: "arithmatex"
-    }
-  };
-</script>
-
 ## Task Lists
 
 > Go to [documentation](https://zensical.org/docs/authoring/lists/#using-task-lists)
