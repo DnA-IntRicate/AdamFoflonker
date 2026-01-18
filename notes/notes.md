@@ -14,23 +14,28 @@ Part III: Case Studies
 
 ---
 
-Primary Publishing:  
+Primary Publishing:
+
 - GitHub Pages
 
-Secondary publishing:  
+Secondary publishing:
+
 - Medium
 - Dev.to
 - Substack
 
-Title Ideas:  
+Title Ideas:
+
 - Principles of Engine Design
 - Foundations of Game Engine Architecture
 - Inside the Engine
 - Architecting Real-Time Game Engines
 
-Subtitle Ideas:  
+Subtitle Ideas:
+
 - None yet...
 
 Interactivity:
-Comments: Giscus, or Utterances
-Traffic: Plausible or GoatCounter
+
+- Comments: Giscus, or Utterances
+- Traffic: Plausible or GoatCounter

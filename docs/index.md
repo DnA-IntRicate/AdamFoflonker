@@ -92,7 +92,6 @@ Hover it, to see a tooltip.
 
 [^1]: This is the footnote.
 
-
 ## Formatting
 
 > Go to [documentation](https://zensical.org/docs/authoring/formatting/)
@@ -149,10 +148,10 @@ $$
 
 > Go to [documentation](https://zensical.org/docs/authoring/lists/#using-task-lists)
 
-* [x] Install Zensical
-* [x] Configure `zensical.toml`
-* [x] Write amazing documentation
-* [ ] Deploy anywhere
+- [x] Install Zensical
+- [x] Configure `zensical.toml`
+- [x] Write amazing documentation
+- [ ] Deploy anywhere
 
 ## Tooltips
 
