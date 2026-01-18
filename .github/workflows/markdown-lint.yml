@@ -1,7 +1,6 @@
 name: Markdown Lint
 
 on:
-  # Runs only when a PR is opened, synchronized or reopened.
   pull_request:
     types: [opened, synchronize, reopened]
     branches: ["main"]
