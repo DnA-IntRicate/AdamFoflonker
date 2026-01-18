@@ -44,7 +44,8 @@ docs_dir = "content"
 #
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
-  { "Get started" = "index.md" },
+  { "Home" = "index.md" },
+  { "Get started" = "markdown/get-started.md" },
   { "Markdown in 5min" = "markdown/markdown.md" },
 ]
 
