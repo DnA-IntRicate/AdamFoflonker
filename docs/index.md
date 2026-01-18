@@ -23,11 +23,9 @@ For full documentation visit [zensical.org](https://zensical.org/docs/).
 > Go to [documentation](https://zensical.org/docs/authoring/admonitions/)
 
 !!! note
-
     This is a **note** admonition. Use it to provide helpful information.
 
 !!! warning
-
     This is a **warning** admonition. Be careful!
 
 ### Details
@@ -35,7 +33,6 @@ For full documentation visit [zensical.org](https://zensical.org/docs/).
 > Go to [documentation](https://zensical.org/docs/authoring/admonitions/#collapsible-blocks)
 
 ??? info "Click to expand for more info"
-    
     This content is hidden until you click to expand it.
     Great for FAQs or long explanations.
 
@@ -50,7 +47,7 @@ def greet(name):
 greet("Python")
 ```
 
-1.  > Go to [documentation](https://zensical.org/docs/authoring/code-blocks/#code-annotations)
+1. > Go to [documentation](https://zensical.org/docs/authoring/code-blocks/#code-annotations)
 
     Code annotations allow to attach notes to lines of code.
 

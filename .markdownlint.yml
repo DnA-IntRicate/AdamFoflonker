@@ -7,6 +7,10 @@ default: true
 # Ignore all files/folders ignored by git
 gitignore: true
 
+# Use dashes for list items
+MD004:
+  style: dash
+
 # Disable line length rules
 MD013: false
 
