@@ -1,2 +1,18 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+###############################################################################
+# Normalize line endings using LF.
+###############################################################################
+* text eol=lf
+
+###############################################################################
+# Behavior for binary files.
+###############################################################################
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.bmp   binary
+*.gif   binary
+*.tga   binary
+*.psd   binary
+*.ico   binary
+*.ttf   binary
+*.pdf binary
