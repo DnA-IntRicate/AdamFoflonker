@@ -18,6 +18,7 @@ site_author = "Adam Foflonker"
 
 # The site_url is the canonical URL for your site. When building online
 # documentation you should set this.
+#
 # Read more: https://zensical.org/docs/setup/basics/#site_url
 site_url = "https://dna-intricate.github.io/AdamFoflonker/"
 
@@ -33,7 +34,7 @@ Copyright &copy; 2026 Adam Foflonker
 # This must be a relative path, which is resolved relative to the configuration file.
 #
 # Read more: https://zensical.org/docs/setup/basics/#docs_dir
-docs_dir = "content/markdown"
+docs_dir = "content"
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
 # If you decide not to define a navigation here then Zensical will simply
@@ -42,10 +43,10 @@ docs_dir = "content/markdown"
 # can be defined using TOML syntax.
 #
 # Read more: https://zensical.org/docs/setup/navigation/
-# nav = [
-#   { "Get started" = "index.md" },
-#   { "Markdown in 5min" = "markdown.md" },
-# ]
+nav = [
+  { "Get started" = "index.md" },
+  { "Markdown in 5min" = "markdown/markdown.md" },
+]
 
 # With the "extra_css" option you can add your own CSS styling to customize
 # your Zensical project according to your needs. You can add any number of
@@ -64,7 +65,7 @@ docs_dir = "content/markdown"
 #
 # Read more: https://zensical.org/docs/customization/#additional-javascript
 extra_javascript = [
-    "../javascripts/mathjax.js",
+    "javascripts/mathjax.js",
     "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
 ]
 
