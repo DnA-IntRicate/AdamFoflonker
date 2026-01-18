@@ -11,21 +11,36 @@ permissions:
 
 jobs:
   deploy:
+    name: Deploy
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - uses: actions/configure-pages@v5
       - uses: actions/checkout@v5
 
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: pip install --upgrade pip
-      - run: pip install -r requirements.txt
-      - run: zensical build --clean
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install Requirements
+        run: |
+            pip install --upgrade pip
+            pip install -r requirements.txt
+
+      - name: Zensical Build
+        run: zensical build --clean
+
+      - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v4
         with:
