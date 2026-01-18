@@ -1,13 +1,16 @@
-Part I: Foundations  
-  1. Mental Models
-  2. Abstractions That Leak
+Part I: Foundations
 
-Part II: Systems  
-  3. Memory Ownership
-  4. Lifetime vs Identity
+- Mental Models
+- Abstractions That Leak
 
-Part III: Case Studies  
-  5. Engine Architecture
+Part II: Systems
+
+- Memory Ownership
+- Lifetime vs Identity
+
+Part III: Case Studies
+
+- Engine Architecture
 
 ---
 
@@ -27,7 +30,6 @@ Title Ideas:
 
 Subtitle Ideas:  
 - None yet...
-
 
 Interactivity:
 Comments: Giscus, or Utterances

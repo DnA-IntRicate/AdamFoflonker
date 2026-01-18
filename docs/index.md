@@ -8,9 +8,9 @@ For full documentation visit [zensical.org](https://zensical.org/docs/).
 
 ## Commands
 
-* [`zensical new`][new] - Create a new project
-* [`zensical serve`][serve] - Start local web server
-* [`zensical build`][build] - Build your site
+- [`zensical new`][new] - Create a new project
+- [`zensical serve`][serve] - Start local web server
+- [`zensical build`][build] - Build your site
 
   [new]: https://zensical.org/docs/usage/new/
   [serve]: https://zensical.org/docs/usage/preview/
@@ -108,11 +108,11 @@ Hover it, to see a tooltip.
 
 > Go to [documentation](https://zensical.org/docs/authoring/icons-emojis/)
 
-* :sparkles: `:sparkles:`
-* :rocket: `:rocket:`
-* :tada: `:tada:`
-* :memo: `:memo:`
-* :eyes: `:eyes:`
+- :sparkles: `:sparkles:`
+- :rocket: `:rocket:`
+- :tada: `:tada:`
+- :memo: `:memo:`
+- :eyes: `:eyes:`
 
 ## Maths
 

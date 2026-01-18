@@ -30,3 +30,6 @@ MD029: false
 
 # Allow headings to end with punctuation
 MD026: false
+
+# Allow different block styles per file
+MD046: false
