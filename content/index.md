@@ -1,3 +1,8 @@
+---
+hide:
+  - footer
+---
+
 <div id="hero">
   <canvas id="gfx-canvas"></canvas>
 </div>

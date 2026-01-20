@@ -59,7 +59,10 @@ nav = [
 #
 # Read more: https://zensical.org/docs/customization/#additional-css
 #
-extra_css = ["stylesheets/markdown-extra.css"]
+extra_css = [
+  "stylesheets/hero.css",
+  "stylesheets/markdown-extra.css"
+]
 
 # With the `extra_javascript` option you can add your own JavaScript to your
 # project to customize the behavior according to your needs.
