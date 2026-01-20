@@ -45,8 +45,10 @@ docs_dir = "content"
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
   { "Home" = "index.md" },
-  { "Get started" = "markdown/get-started.md" },
-  { "Markdown in 5min" = "markdown/markdown.md" },
+  { "Other stuff" = [
+    "markdown/get-started.md",
+    "markdown/markdown.md"
+  ]}
 ]
 
 # With the "extra_css" option you can add your own CSS styling to customize
@@ -57,7 +59,7 @@ nav = [
 #
 # Read more: https://zensical.org/docs/customization/#additional-css
 #
-#extra_css = ["stylesheets/extra.css"]
+extra_css = ["stylesheets/markdown-extra.css"]
 
 # With the `extra_javascript` option you can add your own JavaScript to your
 # project to customize the behavior according to your needs.
