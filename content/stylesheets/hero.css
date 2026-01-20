@@ -13,3 +13,12 @@
     height: 100%;
     display: block;
 }
+
+.md-header {
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    width: 100%;
+    z-index: 10;
+}

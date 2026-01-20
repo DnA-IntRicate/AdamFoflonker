@@ -60,7 +60,6 @@ nav = [
 # Read more: https://zensical.org/docs/customization/#additional-css
 #
 extra_css = [
-  "stylesheets/hero.css",
   "stylesheets/markdown-extra.css"
 ]
 

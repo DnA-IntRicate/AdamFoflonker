@@ -8,3 +8,4 @@ hide:
 </div>
 
 <script type="module" src="/assets/hero.js"></script>
+<link rel="stylesheet" href="/stylesheets/hero.css">
