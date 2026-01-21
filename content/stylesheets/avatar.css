@@ -1,0 +1,26 @@
+/* Centers the avatar image */
+.avatar
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 5rem;
+}
+
+/* Frames the avatar image in a round frame and adjusts the size */
+.avatar img
+{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Centers the caption text and places it under the avatar image */
+.avatar .caption
+{
+    margin-top: 0.5rem;    /* spacing below image */
+    font-size: 0.9rem;     /* adjust size */
+    color: #888;         /* gray text, adjust to taste */
+    text-align: left;
+}
