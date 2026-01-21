@@ -46,3 +46,22 @@
 {
     display: none !important;
 }
+
+
+/* Kill the left navigation sidebar */
+.md-sidebar--primary
+{
+    display: none !important;
+}
+
+/* Remove the space occupied by the left navigation sidebar */
+.md-main
+{
+    margin-left: 0 !important;
+}
+
+/* Let markdown content use the full width */
+.md-content
+{
+    max-width: 100% !important;
+}

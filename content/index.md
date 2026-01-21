@@ -17,6 +17,6 @@ hide:
 
 <div class="avatar">
   <img src="/assets/me.png" alt="Headshot of Adam Foflonker">
-  <div class="caption">This is my caption text</div>
+  <div class="caption">Adam Foflonker</div>
 </div>
 <link rel="stylesheet" href="/stylesheets/avatar.css">
