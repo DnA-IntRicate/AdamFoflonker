@@ -12,7 +12,7 @@ if (!gl)
 const vs = await fetch("shaders/hero.vert").then(r => r.text());
 
 // Fragment shader
-const fs = await fetch("shaders/hero.frag").then(r => r.text());
+const fs = await fetch("shaders/dark-matter.frag").then(r => r.text());
 
 ////////////////
 // WebGL setup
