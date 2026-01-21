@@ -14,7 +14,7 @@ out vec4 fragColor;
 #define ZOOM 0.35
 
 // Controls the speed of the animation
-#define TIME_SCALE 0.55
+#define TIME_SCALE 0.35
 
 // Controls the amount of detail in the animation
 #define DETAIL_LEVEL 19.0
@@ -29,7 +29,7 @@ out vec4 fragColor;
 #define LUMINOSITY 25.6 // 25.6
 
 // The tint color to apply to the animation
-#define TINT vec3(0.85, 0.1, 0.35)
+#define TINT vec3(1.0, 0.05, 0.45)
 
 void main()
 {
