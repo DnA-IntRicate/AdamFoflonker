@@ -1,3 +1,8 @@
+// Force dark mode on the home page
+document.body.setAttribute("data-md-color-scheme", "slate");
+// Force a specific primary color on the home page
+// document.body.setAttribute("data-md-color-primary", "red");
+
 const canvas = document.getElementById("gfx-canvas");
 const gl = canvas.getContext("webgl2");
 
