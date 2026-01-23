@@ -2,6 +2,8 @@
 hide:
   - footer
   - toc
+search:
+    exclude: true
 ---
 
 <div id="hero">
@@ -10,6 +12,8 @@ hide:
 
 <script type="module" src="/javascripts/hero.js"></script>
 <link rel="stylesheet" href="/stylesheets/hero.css">
+
+#
 
 <div class="hero-content">
   <h1 class="hero-title">

@@ -47,7 +47,6 @@
     display: none !important;
 }
 
-
 /* Kill the left navigation sidebar */
 .md-sidebar--primary
 {
@@ -66,6 +65,14 @@
     max-width: 100% !important;
 }
 
+/* Hide permalinks for markdown headers */
+.md-typeset h1 .headerlink,
+.md-typeset h2 .headerlink,
+.md-typeset h3 .headerlink,
+.md-typeset h4 .headerlink
+{
+    display: none;
+}
 
 /* Center the hero content */
 .hero-content
@@ -83,7 +90,7 @@
     text-align: center;
 
     /* Nudge the content box to the optical center */
-    /* transform: translateX(5rem);*/
+    /* transform: translateX(5rem); */
 }
 
 /* Debug render a bounding box around the hero content */
