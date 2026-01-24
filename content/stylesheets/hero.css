@@ -48,6 +48,13 @@ body
     gap: 0;
 }
 
+/* Disable sticky scroll */
+.md-header,
+.md-header__inner
+{
+    position: static !important;
+}
+
 /* Hide the horizontal footer bar */
 .md-footer
 {
