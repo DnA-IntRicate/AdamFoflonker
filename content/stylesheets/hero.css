@@ -55,10 +55,15 @@ body
     position: static !important;
 }
 
-/* Hide the horizontal footer bar */
+/* Makes the horizontal footer bar transparent */
 .md-footer
 {
-    display: none !important;
+    background: transparent !important;
+}
+
+.md-footer *
+{
+    background-color: transparent !important;
     background: transparent !important;
 }
 
