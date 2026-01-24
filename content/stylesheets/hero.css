@@ -10,6 +10,13 @@
     pointer-events: none; /* so links still work */
 }
 
+/* Prevents the header content from being shifted because of the hero box */
+body
+{
+    position: absolute;
+    inset: 0;
+}
+
 /* Center the canvas and extend size to fullscreen */
 #gfx-canvas
 {
