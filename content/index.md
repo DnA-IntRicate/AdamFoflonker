@@ -26,11 +26,16 @@ search:
   </div>
 </div>
 
-<!--
-<div align="center">
-<h2>Recent Posts</h2>
+<div class="recent-posts" markdown="1">
+  <div class="heading" markdown="1">Recent Posts</div>
+
+| Title | Date |
+|:-------|------:|
+| [Building a Shader-Driven Hero Section Without Killing Performance](/markdown/get-started.md) | 18 Jan, 2026 |
+| [Why WebGPU Changes the Way We Think About the Web](/markdown/markdown.md) | 10 Jan, 2026 |
+| [Engine Architecture Notes: What Scales and What Doesn’t](/markdown/architecture.md) | 22 Dec, 2025 |
 </div>
--->
+<link rel="stylesheet" href="/stylesheets/recent-posts.css">
 
 <!--
 

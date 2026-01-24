@@ -1,0 +1,77 @@
+/* Base class style */
+.recent-posts
+{
+    margin: 4.5rem auto 0 auto;
+    max-width: 800px;
+    text-align: center;
+    color: white;
+}
+
+/* Base table style */
+.recent-posts table
+{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 0.7rem;
+}
+
+/* Disable the table header */
+.recent-posts table thead
+{
+    display: none !important;
+}
+
+/* Table border style */
+.recent-posts tr,
+.recent-posts th,
+.recent-posts td
+{
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Table content font size */
+.recent-posts a,
+.recent-posts td
+{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Post title style */
+.recent-posts a
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Post title style when hovered by cursor */
+.recent-posts a:hover
+{
+    color: red;
+    text-decoration: underline;
+}
+
+/* Kill theme background colors */
+.recent-posts table,
+.recent-posts th,
+.recent-posts td
+{
+    background-color: transparent !important;
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+}
+
+/* Table header style */
+.recent-posts .heading
+{
+    font-family: var(--md-heading-font-family);
+    font-weight: 600;
+    font-size: clamp(1.0rem, 1.4vw, 1.2rem);
+    color: white;
+    margin-bottom: -1rem;
+    text-align: left;
+    transform: translateX(3rem);
+}
