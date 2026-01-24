@@ -31,17 +31,8 @@ search:
 
 | Title | Date |
 |:-------|------:|
-| [Building a Shader-Driven Hero Section Without Killing Performance](/markdown/get-started.md) | 18 Jan, 2026 |
-| [Why WebGPU Changes the Way We Think About the Web](/markdown/markdown.md) | 10 Jan, 2026 |
-| [Engine Architecture Notes: What Scales and What Doesn’t](/markdown/architecture.md) | 22 Dec, 2025 |
+| [Coming Soon...](/markdown/get-started.md) | 24 Jan, 2026 |
+| [-](/markdown/markdown.md) | ... |
+| [-](/markdown/architecture.md) | ... |
 </div>
 <link rel="stylesheet" href="/stylesheets/recent-posts.css">
-
-<!--
-
----
-
-<p style="opacity: 0.7; font-size: 0.9rem;">
-This site is a living notebook. Expect experiments, revisions, and strong opinions backed by code.
-</p>
--->

@@ -11,7 +11,10 @@
 .recent-posts table
 {
     width: 100%;
+    min-width: 100% !important;
+    max-width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
     margin: 0 auto;
     font-size: 0.7rem;
 }
@@ -64,6 +67,30 @@
     border-right-color: transparent !important;
 }
 
+/* Let the Title column take up all remaining space */
+.recent-posts table th:first-child,
+.recent-posts table td:first-child
+{
+    width: auto;
+}
+
+/* Keep the Date column tight to its content */
+.recent-posts table th:last-child,
+.recent-posts table td:last-child
+{
+    width: 1%;
+    white-space: nowrap;
+}
+
+/* Force the table to extend to max-width */
+.recent-posts>div,
+.recent-posts .md-typeset__table,
+.recent-posts .table-wrapper
+{
+    width: 100% !important;
+    display: block !important;
+}
+
 /* Table header style */
 .recent-posts .heading
 {
@@ -73,5 +100,4 @@
     color: white;
     margin-bottom: -1rem;
     text-align: left;
-    transform: translateX(3rem);
 }
