@@ -25,6 +25,6 @@ jobs:
         uses: DavidAnson/markdownlint-cli2-action@v20
         with:
           globs: |
-            docs/**/*.md
-            notes/**/*.md
+            content/markdown/**/*.md
             README.md
+          # NOTE: index.md is intentionally excluded here - most of that file contains inline HTML
