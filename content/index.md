@@ -20,7 +20,7 @@ search:
   <p class="hero-subtitle">A technical blog about designing and writing game engines in C++</p>
 
   <div class="avatar">
-    <img src="/assets/me.png" alt="Headshot of Adam Foflonker">
+    <img src="/assets/avatar.png" alt="Headshot of Adam Foflonker">
     <div class="caption-title">Adam Foflonker</div>
     <div class="caption-subtitle">Game Engine Developer & Computer Engineer</div>
   </div>
