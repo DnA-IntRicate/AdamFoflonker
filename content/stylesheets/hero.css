@@ -152,6 +152,7 @@ body
     height: 110px;
     border-radius: 50%;
     object-fit: cover;
+    pointer-events: none;
 }
 
 /* Centers the caption title text under the avatar image */
