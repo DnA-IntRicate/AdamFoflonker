@@ -81,7 +81,7 @@
     z-index: 1;
     max-width: 900px;
     margin: 0 auto;
-    margin-top: -2rem; /* Reclaim the top space left by the blank markdown heading */
+    margin-top: -4rem; /* Reclaim the top space left by the blank markdown heading */
     padding: 0 1rem;
 
     display: flex;
@@ -94,24 +94,31 @@
 }
 
 /* Debug render a bounding box around the hero content */
-.hero-content
+/* .hero-content
 {
     outline: 1px solid red;
-}
+} */
 
 /* Title style */
 .hero-title
 {
-    margin-top: 0;
-    font-size: 2.5rem;
+    font-family: var(--md-heading-font-family);
+    font-weight: 600;
+    font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+    line-height: 1.15;
+    margin: 0;
+    color: white;
+    letter-spacing: -0.095rem;
 }
 
 /* Subtitle style */
 .hero-subtitle
 {
-    margin-top: -1rem;
+    margin-top: 1.25rem;
     max-width: 720px;
     opacity: 0.85;
+    font-size: 0.9rem;
+    color: #888;
 }
 
 /* Centers the avatar image */
@@ -126,17 +133,28 @@
 /* Frames the avatar image in a round frame and adjusts the size */
 .avatar img
 {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-/* Centers the caption text and places it under the avatar image */
-.avatar .caption
+/* Centers the caption title text under the avatar image */
+.avatar .caption-title
 {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
+    margin-top: 0.85rem;
+    font-size: 1.0rem;
+    font-weight: 500;
     color: #888;
-    text-align: left;
+    text-align: center;
+}
+
+/* Centers the caption subtitle text and places it under the avatar image */
+.avatar .caption-subtitle
+{
+    margin-top: 0.0rem;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #888;
+    text-align: center;
 }
