@@ -1,0 +1,181 @@
+/* Center the hero scene and put it behind all other page elements */
+#hero
+{
+    position: fixed;
+    inset: 0; /* top: 0; right: 0; bottom: 0; left: 0 */
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* behind all content */
+    overflow: hidden;
+    pointer-events: none; /* so links still work */
+}
+
+/* Prevents the header content from being shifted because of the hero box */
+body
+{
+    position: absolute;
+    inset: 0;
+}
+
+/* Center the canvas and extend size to fullscreen */
+#gfx-canvas
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Makes the horizontal header bar transparent and removes all backdrop blur effects */
+.md-header
+{
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Hide the theme-toggle button */
+.md-header [data-md-component="palette"]
+{
+    display: none !important;
+}
+
+/* Remove empty space left-behind by the hidden theme-toggle button */
+.md-header__inner
+{
+    gap: 0;
+}
+
+/* Disable sticky scroll */
+.md-header,
+.md-header__inner
+{
+    position: static !important;
+}
+
+/* Makes the horizontal footer bar transparent */
+.md-footer
+{
+    background: transparent !important;
+}
+
+.md-footer *
+{
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Kill the left navigation sidebar */
+.md-sidebar--primary
+{
+    display: none !important;
+}
+
+/* Remove the space occupied by the left navigation sidebar */
+.md-main
+{
+    margin-left: 0 !important;
+}
+
+/* Let markdown content use the full width */
+.md-content
+{
+    max-width: 100% !important;
+}
+
+/* Hide permalinks for markdown headers */
+.md-typeset h1 .headerlink,
+.md-typeset h2 .headerlink,
+.md-typeset h3 .headerlink,
+.md-typeset h4 .headerlink
+{
+    display: none;
+}
+
+/* Center the hero content */
+.hero-content
+{
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: -4rem; /* Reclaim the top space left by the blank markdown heading */
+    padding: 0 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    /* Nudge the content box to the optical center */
+    /* transform: translateX(5rem); */
+}
+
+/* Debug render a bounding box around the hero content */
+/* .hero-content
+{
+    outline: 1px solid red;
+} */
+
+/* Title style */
+.hero-title
+{
+    font-family: var(--md-heading-font-family);
+    font-weight: 600;
+    font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+    line-height: 1.15;
+    margin: 0;
+    color: white;
+    letter-spacing: -0.095rem;
+}
+
+/* Subtitle style */
+.hero-subtitle
+{
+    margin-top: 1.25rem;
+    max-width: 720px;
+    opacity: 0.85;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Centers the avatar image */
+.avatar
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 5rem; */
+}
+
+/* Frames the avatar image in a round frame and adjusts the size */
+.avatar img
+{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* Centers the caption title text under the avatar image */
+.avatar .caption-title
+{
+    margin-top: 0.85rem;
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: #888;
+    text-align: center;
+}
+
+/* Centers the caption subtitle text and places it under the avatar image */
+.avatar .caption-subtitle
+{
+    margin-top: 0.0rem;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #888;
+    text-align: center;
+}

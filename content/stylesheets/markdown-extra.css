@@ -1,0 +1,5 @@
+/* Extends the maximum width of markdown content */
+.md-grid
+{
+    max-width: 1440px;
+}

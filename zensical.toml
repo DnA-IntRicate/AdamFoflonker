@@ -44,8 +44,11 @@ docs_dir = "content"
 #
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
-  { "Get started" = "index.md" },
-  { "Markdown in 5min" = "markdown/markdown.md" },
+  { "Home" = "index.md" },
+  { "Other stuff" = [
+    "markdown/get-started.md",
+    "markdown/markdown.md"
+  ]}
 ]
 
 # With the "extra_css" option you can add your own CSS styling to customize
@@ -56,7 +59,9 @@ nav = [
 #
 # Read more: https://zensical.org/docs/customization/#additional-css
 #
-#extra_css = ["stylesheets/extra.css"]
+extra_css = [
+  "stylesheets/markdown-extra.css"
+]
 
 # With the `extra_javascript` option you can add your own JavaScript to your
 # project to customize the behavior according to your needs.
@@ -185,7 +190,7 @@ features = [
     # When instant navigation is enabled, clicks on all internal links will be
     # intercepted and dispatched via XHR without fully reloading the page.
     # https://zensical.org/docs/setup/navigation/#instant-navigation
-    "navigation.instant",
+    #"navigation.instant",
 
     # With instant prefetching, your site will start to fetch a page once the
     # user hovers over a link. This will reduce the perceived loading time
@@ -196,7 +201,7 @@ features = [
     # In order to provide a better user experience on slow connections when
     # using instant navigation, a progress indicator can be enabled.
     # https://zensical.org/docs/setup/navigation/#progress-indicator
-    #"navigation.instant.progress",
+    "navigation.instant.progress",
 
     # When navigation paths are activated, a breadcrumb navigation is rendered
     # above the title of each page
@@ -216,7 +221,7 @@ features = [
     # When tabs are enabled, top-level sections are rendered in a menu layer
     # below the header for viewports above 1220px, but remain as-is on mobile.
     # https://zensical.org/docs/setup/navigation/#navigation-tabs
-    #"navigation.tabs",
+    "navigation.tabs",
 
     # When sticky tabs are enabled, navigation tabs will lock below the header
     # and always remain visible when scrolling down.
@@ -259,15 +264,19 @@ features = [
 # Read more:
 # - https://zensical.org/docs/setup/colors/
 # ----------------------------------------------------------------------------
+# Palette toggle for dark mode
 [[project.theme.palette]]
-scheme = "default"
-toggle.icon = "lucide/sun"
-toggle.name = "Switch to dark mode"
-
-[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
 scheme = "slate"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"
+
+# Palette toggle for light mode
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
 
 # ----------------------------------------------------------------------------
 # In the "font" subsection you can configure the fonts used. By default, fonts
@@ -304,3 +313,6 @@ toggle.name = "Switch to light mode"
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
 link = "https://github.com/DnA-IntRicate/AdamFoflonker"
+
+[project.extra]
+generator = false
