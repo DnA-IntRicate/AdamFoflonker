@@ -49,9 +49,10 @@ body
 }
 
 /* Hide the horizontal footer bar */
-.md-footer-meta
+.md-footer
 {
     display: none !important;
+    background: transparent !important;
 }
 
 /* Kill the left navigation sidebar */
