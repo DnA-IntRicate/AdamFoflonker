@@ -60,7 +60,9 @@ nav = [
 # Read more: https://zensical.org/docs/customization/#additional-css
 #
 extra_css = [
-  "stylesheets/markdown-extra.css"
+  "stylesheets/hero.css",
+  "stylesheets/markdown-extra.css",
+  "stylesheets/recent-posts.css"
 ]
 
 # With the `extra_javascript` option you can add your own JavaScript to your
@@ -70,6 +72,7 @@ extra_css = [
 #
 # Read more: https://zensical.org/docs/customization/#additional-javascript
 extra_javascript = [
+    "javascripts/hero.js",
     "javascripts/mathjax.js",
     "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
 ]
