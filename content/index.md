@@ -12,7 +12,7 @@ search:
   <canvas id="gfx-canvas"></canvas>
 </div>
 
-<script type="module" src="/javascripts/hero.js"></script>
+<script type="module" src="javascripts/hero.js"></script>
 
 #
 
@@ -21,7 +21,7 @@ search:
   <p class="hero-subtitle">A technical blog about designing and writing game engines in C++</p>
 
   <div class="avatar">
-    <img src="/assets/avatar.png" alt="Headshot of Adam Foflonker">
+    <img src="assets/avatar.png" alt="Headshot of Adam Foflonker">
     <div class="caption-title">Adam Foflonker</div>
     <div class="caption-subtitle">Game Engine Developer &amp; Computer Engineer</div>
   </div>
