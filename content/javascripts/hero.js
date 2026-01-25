@@ -1,98 +1,115 @@
-// Force dark mode on the home page
-document.body.setAttribute("data-md-color-scheme", "slate");
-// Force a specific primary color on the home page
-// document.body.setAttribute("data-md-color-primary", "red");
+/**
+ * This script applies to index.md.
+ */
+(async () => {
+    // DOM guard
+    // if (!document.querySelector(".hero-page"))
+    //     return;
 
-const canvas = document.getElementById("gfx-canvas");
-const gl = canvas.getContext("webgl2");
+    // Force dark mode on the home page
+    document.body.setAttribute("data-md-color-scheme", "slate");
+    // Force a specific primary color on the home page
+    // document.body.setAttribute("data-md-color-primary", "red");
 
-if (!gl)
-    console.error("WebGL not supported");
+    const canvas = document.getElementById("gfx-canvas");
+    if (!canvas)
+        return; // Canvas was null, cannot continue
 
-////////////////
-// Shaders
-////////////////
-
-// Vertex shader
-const vs = await fetch("shaders/hero.vert").then(r => r.text());
-
-// Fragment shader
-const fs = await fetch("shaders/dark-matter.frag").then(r => r.text());
-
-////////////////
-// WebGL setup
-////////////////
-
-// Shader creation helper
-function createShader(gl, type, source)
-{
-    const shader = gl.createShader(type);
-    gl.shaderSource(shader, source);
-    gl.compileShader(shader);
-
-    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS))
+    const gl = canvas.getContext("webgl2");
+    if (!gl)
     {
-        console.error("Shader compile error:", gl.getShaderInfoLog(shader));
-        gl.deleteShader(shader);
-        return null;
+        console.error("WebGL2 not supported!");
+        return;
     }
 
-    return shader;
-}
+    ////////////////
+    // Shaders
+    ////////////////
 
-// Bind shader program
-const program = gl.createProgram();
-gl.attachShader(program, createShader(gl, gl.VERTEX_SHADER, vs));
-gl.attachShader(program, createShader(gl, gl.FRAGMENT_SHADER, fs));
-gl.linkProgram(program);
+    // Vertex shader
+    const vs = await fetch("shaders/hero.vert").then(r => r.text());
 
-if (!gl.getProgramParameter(program, gl.LINK_STATUS))
-    console.error("Program link error:", gl.getProgramInfoLog(program));
+    // Fragment shader
+    const fs = await fetch("shaders/dark-matter.frag").then(r => r.text());
 
-gl.useProgram(program);
+    ////////////////
+    // WebGL setup
+    ////////////////
 
-const buffer = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
-    -1.0, -1.0,
-     1.0, -1.0,
-    -1.0,  1.0,
-    -1.0,  1.0,
-     1.0, -1.0,
-     1.0,  1.0
-]), gl.STATIC_DRAW);
-
-// Vertex shader inputs
-const posLoc = gl.getAttribLocation(program, "a_position");
-gl.enableVertexAttribArray(posLoc);
-gl.vertexAttribPointer(posLoc, 2, gl.FLOAT, false, 0, 0);
-
-// Find uniform locations in the shader program
-const iResolutionLoc = gl.getUniformLocation(program, "iResolution");
-const iTimeLoc = gl.getUniformLocation(program, "iTime");
-
-// Render loop
-function render(time)
-{
-    // Resize handling (High-DPI / Retina aware)
-    const dpr = window.devicePixelRatio || 1;
-
-    const displayWidth = Math.floor(canvas.clientWidth * dpr);
-    const displayHeight = Math.floor(canvas.clientHeight * dpr);
-
-    if ((canvas.width !== displayWidth) || (canvas.height !== displayHeight))
+    // Shader creation helper
+    function createShader(gl, type, source)
     {
-        canvas.width = displayWidth;
-        canvas.height = displayHeight;
-        gl.viewport(0, 0, canvas.width, canvas.height);
+        const shader = gl.createShader(type);
+        gl.shaderSource(shader, source);
+        gl.compileShader(shader);
+
+        if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS))
+        {
+            console.error("Shader compile error:", gl.getShaderInfoLog(shader));
+            gl.deleteShader(shader);
+            return null;
+        }
+
+        return shader;
     }
 
-    gl.uniform3f(iResolutionLoc, canvas.width, canvas.height, 1.0);
-    gl.uniform1f(iTimeLoc, time * 0.001); // Convert time to seconds
+    // Bind shader program
+    const program = gl.createProgram();
+    gl.attachShader(program, createShader(gl, gl.VERTEX_SHADER, vs));
+    gl.attachShader(program, createShader(gl, gl.FRAGMENT_SHADER, fs));
+    gl.linkProgram(program);
 
-    gl.drawArrays(gl.TRIANGLES, 0, 6);
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS))
+    {
+        console.error("Program link error:", gl.getProgramInfoLog(program));
+        return;
+    }
+
+    gl.useProgram(program);
+
+    const buffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
+        -1.0, -1.0,
+         1.0, -1.0,
+        -1.0,  1.0,
+        -1.0,  1.0,
+         1.0, -1.0,
+         1.0,  1.0
+    ]), gl.STATIC_DRAW);
+
+    // Vertex shader inputs
+    const posLoc = gl.getAttribLocation(program, "a_position");
+    gl.enableVertexAttribArray(posLoc);
+    gl.vertexAttribPointer(posLoc, 2, gl.FLOAT, false, 0, 0);
+
+    // Find uniform locations in the shader program
+    const iResolutionLoc = gl.getUniformLocation(program, "iResolution");
+    const iTimeLoc = gl.getUniformLocation(program, "iTime");
+
+    // Render loop
+    function render(time)
+    {
+        // Resize handling (High-DPI / Retina aware)
+        const dpr = window.devicePixelRatio || 1;
+
+        const displayWidth = Math.floor(canvas.clientWidth * dpr);
+        const displayHeight = Math.floor(canvas.clientHeight * dpr);
+
+        if ((canvas.width !== displayWidth) || (canvas.height !== displayHeight))
+        {
+            canvas.width = displayWidth;
+            canvas.height = displayHeight;
+            gl.viewport(0, 0, canvas.width, canvas.height);
+        }
+
+        gl.uniform3f(iResolutionLoc, canvas.width, canvas.height, 1.0);
+        gl.uniform1f(iTimeLoc, time * 0.001); // Convert time to seconds
+
+        gl.drawArrays(gl.TRIANGLES, 0, 6);
+        requestAnimationFrame(render);
+    }
+
+    // Start the render loop
     requestAnimationFrame(render);
-}
-
-// Start the render loop
-requestAnimationFrame(render);
+})();
