@@ -1,6 +1,6 @@
 /**
-* This stylesheet applies to index.md.
-*/
+ * This stylesheet applies to index.md.
+ */
 
 /* Makes the horizontal header bar transparent and removes all backdrop blur effects */
 body:has(.hero-page) .md-header
