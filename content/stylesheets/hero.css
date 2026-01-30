@@ -93,6 +93,8 @@ body:has(.hero-page) .md-typeset h4 .headerlink
     width: 100%;
     height: 100%;
     display: block;
+    will-change: transform;
+    pointer-events: none;
 }
 
 /* Center the hero content */
