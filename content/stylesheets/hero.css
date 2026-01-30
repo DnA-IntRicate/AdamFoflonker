@@ -10,7 +10,6 @@ body:has(.hero-page) .md-header
     -webkit-backdrop-filter: none;
     box-shadow: none;
     width: 100%;
-    z-index: 10;
 }
 
 /* Hide the theme-toggle button */
