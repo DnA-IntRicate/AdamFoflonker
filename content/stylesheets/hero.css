@@ -10,7 +10,6 @@ body:has(.hero-page) .md-header
     -webkit-backdrop-filter: none;
     box-shadow: none;
     width: 100%;
-    z-index: 10;
 }
 
 /* Hide the theme-toggle button */
@@ -44,16 +43,21 @@ body:has(.hero-page) .md-footer *
     background: transparent !important;
 }
 
-/* Kill the left navigation sidebar */
-body:has(.hero-page) .md-sidebar--primary
+/* Kill the left nav sidebar on wide desktop layouts */
+/* This preserves nav functionality on constrained layouts */
+@media (min-width: 76.25em)
 {
-    display: none !important;
-}
+    /* Stop the nav bar from rendering */
+    body:has(.hero-page) .md-sidebar--primary
+    {
+        display: none;
+    }
 
-/* Remove the space occupied by the left navigation sidebar */
-body:has(.hero-page).md-main
-{
-    margin-left: 0 !important;
+    /* Remove the space occupied by the left navigation sidebar */
+    body:has(.hero-page) .md-main
+    {
+        margin-left: 0;
+    }
 }
 
 /* Let markdown content use the full width */
