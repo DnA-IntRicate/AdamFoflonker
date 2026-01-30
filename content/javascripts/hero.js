@@ -91,7 +91,7 @@
     function render(time)
     {
         // Resize handling (High-DPI / Retina aware)
-        const dpr = window.devicePixelRatio || 1;
+        const dpr = Math.min(window.devicePixelRatio || 1, 1.5); // Clamp resolution on mobile
 
         const displayWidth = Math.floor(canvas.clientWidth * dpr);
         const displayHeight = Math.floor(canvas.clientHeight * dpr);
