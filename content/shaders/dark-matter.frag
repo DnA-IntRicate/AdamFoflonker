@@ -1,5 +1,5 @@
 #version 300 es
-precision mediump float;
+precision highp float;
 
 // This shader is a modified version of "Zippy Zaps" by SnoopethDuckDuck
 // See: https://www.shadertoy.com/view/XXyGzh
@@ -42,6 +42,10 @@ void main()
     vec2 v = iResolution.xy;
     vec2 u = gl_FragCoord.xy;
 
+    // Add slight noise to break phase alignment
+    float dither = fract(sin(dot(gl_FragCoord.xy, vec2(12.9898,78.233))) * 43758.5453);
+    u += dither * 0.0001;
+
     float aspect = v.x / v.y;
     float base = min(v.x, v.y);
 
@@ -62,7 +66,7 @@ void main()
     {
         float vv = dot(v, v);
         float uu = dot(u, u);
-        float inv = 1.0 / max(0.5 - uu, 0.08);
+        float inv = 1.0 / (0.5 - uu + 0.12);
 
         o += (1.0 + cos(z + t)) /
             length((1.0 + i * vv) *
