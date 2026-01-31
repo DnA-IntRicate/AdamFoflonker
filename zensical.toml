@@ -22,6 +22,13 @@ site_author = "Adam Foflonker"
 # Read more: https://zensical.org/docs/setup/basics/#site_url
 site_url = "https://dna-intricate.github.io/AdamFoflonker/"
 
+# In order to display a link to the repository of your project as part of your
+# documentation, set repo_url in your configuration to the public URL of your repository.
+#
+# Read more: https://zensical.org/docs/setup/repository/#repository-url
+repo_url = "https://github.com/DnA-IntRicate/AdamFoflonker"
+repo_name = "DnA-IntRicate/AdamFoflonker"
+
 # The copyright notice appears in the page footer and can contain an HTML
 # fragment.
 #
