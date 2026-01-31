@@ -32,9 +32,9 @@ search:
 
 | Title | Date |
 |:-------|------:|
-| [Coming Soon...](/markdown/get-started.md) | 24 Jan, 2026 |
-| [-](/markdown/markdown.md) | ... |
-| [-](/markdown/architecture.md) | ... |
+| [Coming Soon...](markdown/get-started.md) | 24 Jan, 2026 |
+| [-](markdown/markdown.md) | ... |
+| [-](markdown/markdown.md) | ... |
 </div>
 
 </div>
