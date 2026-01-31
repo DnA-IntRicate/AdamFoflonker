@@ -87,6 +87,8 @@
     const iResolutionLoc = gl.getUniformLocation(program, "iResolution");
     const iTimeLoc = gl.getUniformLocation(program, "iTime");
 
+    const isMobile = window.matchMedia("(pointer: coarse)").matches && !window.matchMedia("(hover: hover)").matches;
+
     // Render loop
     function render(time)
     {
@@ -98,8 +100,10 @@
 
         if ((canvas.width !== displayWidth) || (canvas.height !== displayHeight))
         {
-            canvas.width = displayWidth;
-            canvas.height = displayHeight;
+            const scale = isMobile ? 0.5 : 1.0; // Render at half-res on mobile
+            canvas.width = displayWidth * scale;
+            canvas.height = displayHeight * scale;
+
             gl.viewport(0, 0, canvas.width, canvas.height);
         }
 
