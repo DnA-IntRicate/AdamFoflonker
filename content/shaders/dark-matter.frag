@@ -14,7 +14,7 @@ out vec4 fragColor;
 #define ZOOM 0.5
 
 // Controls the speed of the animation
-#define TIME_SCALE 0.3
+#define TIME_SCALE 0.2
 
 // Controls the amount of detail in the animation
 #define DETAIL_LEVEL 19.0
@@ -56,27 +56,32 @@ void main()
     vec4 o = fragColor;
     vec4 z = o = vec4(1.0, 2.0, 3.0, 0.0); // RGB phase channels
 
+    float detail = mix(13.0, DETAIL_LEVEL, smoothstep(0.6, 1.4, v.x / v.y));
     float ap = 1.0;
-    for (float a = 0.5, t = iTime * TIME_SCALE, i; ++i < DETAIL_LEVEL;)
+    for (float a = 0.5, t = iTime * TIME_SCALE, i; ++i < detail;)
     {
         float vv = dot(v, v);
         float uu = dot(u, u);
+        float inv = 1.0 / max(0.5 - uu, 0.08);
 
         o += (1.0 + cos(z + t)) /
             length((1.0 + i * vv) *
-            sin(RADIAL_DISTORTION * u / (0.5 - uu) - 9.0 * u.yx + t));
+            sin(RADIAL_DISTORTION * u * inv - 9.0 * u.yx + t));
 
         a += 0.03;
         ap *= a;
         v = cos(++t - 7.0 * u * ap) - DISTORTION_SCALE * u;
 
+        // Explicit matrix multiply
         vec2 cz = cos(vec2(i + 0.02 * t) - z.wx * 11.0);
-        mat2 m = mat2(cz.x, -cz.y, cz.y, cz.x);
+        u = vec2(u.x * cz.x - u.y * cz.y,
+            u.x * cz.y + u.y * cz.x);
 
-        u += tanhClamped(40.0 * dot(u *= m, u) *
+        float e = 1.0 + dot(o, o) * 0.01;
+        u += tanhClamped(40.0 * dot(u, u) *
             cos(70.0 * u.yx + t)) * 0.005 +
             0.2 * a * u +
-            cos(4.0 / exp(dot(o, o) * 0.01) + t) * 0.0033333333;
+            cos(4.0 / e + t) * 0.0033333333;
     }
 
     float uu = dot(u, u);
