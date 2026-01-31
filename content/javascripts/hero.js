@@ -89,7 +89,26 @@
 
     const isMobile = window.matchMedia("(pointer: coarse)").matches && !window.matchMedia("(hover: hover)").matches;
 
+    const targetMobileDeltaTime = 33.33; // 33.33ms ~ 30 FPS
+    const targetDesktopDeltaTime = 16.67; // 16.67ms ~ 60 FPS
+    let lastFrameTime = 0;
+
     // Render loop
+    function frame(time)
+    {
+        // Lock framerate to 30 FPS on mobile, and 60 FPS for desktop
+        const targetDeltaTime = isMobile ? targetMobileDeltaTime : targetDesktopDeltaTime;
+
+        // Framerate limiting
+        if ((time - lastFrameTime) >= targetDeltaTime)
+        {
+            lastFrameTime = time;
+            render(time);
+        }
+
+        requestAnimationFrame(frame);
+    }
+
     function render(time)
     {
         // Resize handling (High-DPI / Retina aware)
@@ -111,9 +130,8 @@
         gl.uniform1f(iTimeLoc, time * 0.001); // Convert time to seconds
 
         gl.drawArrays(gl.TRIANGLES, 0, 6);
-        requestAnimationFrame(render);
     }
 
     // Start the render loop
-    requestAnimationFrame(render);
+    requestAnimationFrame(frame);
 })();
