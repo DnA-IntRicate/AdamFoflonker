@@ -116,12 +116,6 @@ body:has(.hero-page) .md-typeset h4 .headerlink
     /* transform: translateX(5rem); */
 }
 
-/* Debug render a bounding box around the hero content */
-/* .hero-content
-{
-    outline: 1px solid red;
-} */
-
 /* Title style */
 .hero-page .hero-content .hero-title
 {
@@ -182,3 +176,9 @@ body:has(.hero-page) .md-typeset h4 .headerlink
     color: #888;
     text-align: center;
 }
+
+/* Debug render a bounding box around the hero content */
+/* .hero-content
+{
+    outline: 1px solid red;
+} */

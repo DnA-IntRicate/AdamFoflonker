@@ -92,7 +92,7 @@
 .recent-posts .table-wrapper
 {
     width: 100% !important;
-    display: block !important;
+    display: inline !important;
 }
 
 /* Table header style */
@@ -105,3 +105,15 @@
     margin-bottom: -1rem;
     text-align: left;
 }
+
+/* Debug render a bounding box around the table content */
+/* .recent-posts
+{
+    outline: 1px solid red;
+} */
+
+/* Debug render a bounding box around the table's markdown typeset content */
+/* .recent-posts .md-typeset__table
+{
+    outline: 1px solid lime;
+} */
