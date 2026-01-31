@@ -131,7 +131,7 @@ body:has(.hero-page) .md-typeset h4 .headerlink
 /* Subtitle style */
 .hero-page .hero-content .hero-subtitle
 {
-    margin-top: 1.25rem;
+    margin-top: 2.0rem;
     max-width: 720px;
     opacity: 0.85;
     font-size: 0.9rem;
