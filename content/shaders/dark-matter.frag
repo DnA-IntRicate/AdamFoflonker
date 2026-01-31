@@ -1,5 +1,5 @@
 #version 300 es
-precision mediump float;
+precision highp float;
 
 // This shader is a modified version of "Zippy Zaps" by SnoopethDuckDuck
 // See: https://www.shadertoy.com/view/XXyGzh
