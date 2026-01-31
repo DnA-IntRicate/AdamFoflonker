@@ -316,9 +316,24 @@ code = "JetBrains Mono"
 # ----------------------------------------------------------------------------
 # The "extra" section contains miscellaneous settings.
 # ----------------------------------------------------------------------------
+
+# GitHub
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
-link = "https://github.com/DnA-IntRicate/AdamFoflonker"
+link = "https://github.com/DnA-IntRicate"
+# LinkedIn
+[[project.extra.social]]
+icon = "fontawesome/brands/linkedin"
+link = "https://www.linkedin.com/in/adam-foflonker-008017334/"
+# Instagram
+[[project.extra.social]]
+icon = "fontawesome/brands/instagram"
+link = "https://www.instagram.com/adamfoflonker/"
+# Email
+[[project.extra.social]]
+icon = "fontawesome/solid/paper-plane"
+link = "mailto:adam.foflonker@gmail.com"
 
+# Hide the Zensical generator message
 [project.extra]
 generator = false
