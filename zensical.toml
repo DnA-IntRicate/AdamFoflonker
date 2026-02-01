@@ -27,6 +27,10 @@ site_url = "https://dna-intricate.github.io/AdamFoflonker/"
 #
 # Read more: https://zensical.org/docs/setup/repository/#repository-url
 repo_url = "https://github.com/DnA-IntRicate/AdamFoflonker"
+
+# The name to display on the git repo link
+#
+# Read more: https://zensical.org/docs/setup/repository/#repository-name
 repo_name = "DnA-IntRicate/AdamFoflonker"
 
 # The copyright notice appears in the page footer and can contain an HTML
@@ -316,8 +320,8 @@ code = "JetBrains Mono"
 # - https://zensical.org/docs/setup/logo-and-icons
 # - https://zensical.org/docs/authoring/icons-emojis/#search
 # ----------------------------------------------------------------------------
-#[project.theme.icon]
-#logo = "lucide/smile"
+[project.theme.icon]
+logo = "lucide/book-marked"
 #repo = "lucide/smile"
 
 # ----------------------------------------------------------------------------
