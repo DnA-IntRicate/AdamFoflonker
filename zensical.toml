@@ -38,7 +38,7 @@ repo_name = "DnA-IntRicate/AdamFoflonker"
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
-Copyright &copy; 2026 Adam Foflonker
+Copyright &copy; 2026 Adam Foflonker — CC BY-NC-ND 4.0
 """
 
 # The docs_dir setting specifies the path to the directory that contains your source files.
