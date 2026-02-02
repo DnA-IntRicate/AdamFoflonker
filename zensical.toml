@@ -349,7 +349,23 @@ link = "mailto:adam.foflonker@gmail.com"
 [project.extra]
 generator = false
 
-# Google analytics
+# Cookie consent
+#
+# See: https://zensical.org/docs/setup/data-privacy/#cookie-consent
+[project.extra.consent]
+title = "Cookie consent"
+description = """
+This blog uses a small number of cookies for essential functionality and basic, anonymous analytics.
+They help keep the site working and let me know which posts are useful.
+No advertising cookies. No cross-site tracking.
+You can disable cookies in your browser at any time.
+"""
+actions = [
+  "accept",
+  "manage"
+]
+
+# Google Analytics
 # The "property" is referred to as the "Measurement ID" in the Google Analytics admin page
 #
 # See: https://zensical.org/docs/setup/analytics/#google-analytics
