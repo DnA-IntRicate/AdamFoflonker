@@ -348,3 +348,11 @@ link = "mailto:adam.foflonker@gmail.com"
 # Hide the Zensical generator message
 [project.extra]
 generator = false
+
+# Google analytics
+# The "property" is referred to as the "Measurement ID" in the Google Analytics admin page
+#
+# See: https://zensical.org/docs/setup/analytics/#google-analytics
+[project.extra.analytics]
+provider = "google"
+property = "G-ZDPXSH2LC3" # Also called the Measurement ID
