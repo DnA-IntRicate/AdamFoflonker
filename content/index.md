@@ -2,6 +2,7 @@
 hide:
   - footer
   - toc
+  - feedback
 search:
     exclude: true
 ---

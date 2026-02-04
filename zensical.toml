@@ -38,7 +38,8 @@ repo_name = "DnA-IntRicate/AdamFoflonker"
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
-Copyright &copy; 2026 Adam Foflonker — CC BY-NC-ND 4.0
+  Copyright &copy; 2026 Adam Foflonker — CC BY-NC-ND 4.0<br>
+  <a href="#__consent">Change cookie settings</a>
 """
 
 # The docs_dir setting specifies the path to the directory that contains your source files.
@@ -348,3 +349,51 @@ link = "mailto:adam.foflonker@gmail.com"
 # Hide the Zensical generator message
 [project.extra]
 generator = false
+
+# Cookie consent form
+#
+# See: https://zensical.org/docs/setup/data-privacy/#cookie-consent
+[project.extra.consent]
+title = "Cookie consent"
+description = """
+This blog uses a small number of cookies for essential functionality and basic, anonymous analytics.
+They help keep the site working and let me know which posts are useful.
+No advertising cookies. No cross-site tracking.
+You can disable cookies in your browser at any time.
+"""
+actions = [
+  "accept",
+  "manage"
+]
+
+# Google Analytics
+# The "property" is referred to as the "Measurement ID" in the Google Analytics admin page
+#
+# See: https://zensical.org/docs/setup/analytics/#google-analytics
+[project.extra.analytics]
+provider = "google"
+property = "G-ZDPXSH2LC3" # Also called the Measurement ID
+
+# Was this page helpful?
+# Simple feedback widget shown at the bottom of each page
+#
+# See: https://zensical.org/docs/setup/analytics/#was-this-page-helpful
+[project.extra.analytics.feedback]
+title = "Was this page interesting?"
+# Good rating
+[[project.extra.analytics.feedback.ratings]]
+icon = "material/emoticon-happy-outline"
+name = "This page was interesting"
+data = 1
+note = "Thanks for your feedback!"
+# Bad rating
+[[project.extra.analytics.feedback.ratings]]
+icon = "material/emoticon-sad-outline"
+name = "This page could be improved"
+data = 0
+note = """
+  Thanks for your feedback! Help me improve this page by
+  opening a
+  <a href="https://github.com/DnA-IntRicate/AdamFoflonker/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">
+  GitHub issue</a>.
+"""
