@@ -1,5 +1,6 @@
 ---
 icon: lucide/rocket
+comments: true
 ---
 
 # Get started
