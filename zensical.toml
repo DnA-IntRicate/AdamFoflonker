@@ -373,3 +373,27 @@ actions = [
 [project.extra.analytics]
 provider = "google"
 property = "G-ZDPXSH2LC3" # Also called the Measurement ID
+
+# Was this page helpful?
+# Simple feedback widget shown at the bottom of each page
+#
+# See: https://zensical.org/docs/setup/analytics/#was-this-page-helpful
+[project.extra.analytics.feedback]
+title = "Was this page interesting?"
+# Good rating
+[[project.extra.analytics.feedback.ratings]]
+icon = "material/emoticon-happy-outline"
+name = "This page was interesting"
+data = 1
+note = "Thanks for your feedback!"
+# Bad rating
+[[project.extra.analytics.feedback.ratings]]
+icon = "material/emoticon-sad-outline"
+name = "This page could be improved"
+data = 0
+note = """
+  Thanks for your feedback! Help me improve this page by
+  opening a
+  <a href="https://github.com/DnA-IntRicate/AdamFoflonker/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">
+  GitHub issue</a>.
+"""
