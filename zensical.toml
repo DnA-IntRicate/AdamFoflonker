@@ -59,7 +59,8 @@ nav = [
   { "Home" = "index.md" },
   { "Other stuff" = [
     "markdown/get-started.md",
-    "markdown/markdown.md"
+    "markdown/markdown.md",
+    "markdown/sample-blog-post.md"
   ]}
 ]
 
