@@ -13,11 +13,9 @@ tab_width = 4
 trim_trailing_whitespace = true
 charset = utf-8
 
-# Preserve whitespace for Markdown & use two-space indentation
+# Preserve whitespace for Markdown
 [*.md]
 trim_trailing_whitespace = false
-indent_size = 2
-tab_width = 2
 
 # YAML indentation
 [*.yaml]
