@@ -16,3 +16,9 @@
 *.ico   binary
 *.ttf   binary
 *.pdf binary
+
+###############################################################################
+# Set Markdown code to be indexed as an actual language by GitHub Linguist.
+###############################################################################
+content/**/*.md linguist-language=Markdown
+content/**/*.md linguist-detectable=true
