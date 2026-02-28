@@ -9,7 +9,7 @@ site_name = "Adam Foflonker"
 # meaningful description of the site content for use by search engines.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_description
-site_description = "Adam's technical blog."
+site_description = "Adam's technical blog and portfolio."
 
 # The site_author attribute. This is used in the HTML head element.
 #
@@ -20,7 +20,7 @@ site_author = "Adam Foflonker"
 # documentation you should set this.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_url
-site_url = "https://dna-intricate.github.io/AdamFoflonker/"
+site_url = "https://adamfoflonker.com"
 
 # In order to display a link to the repository of your project as part of your
 # documentation, set repo_url in your configuration to the public URL of your repository.
