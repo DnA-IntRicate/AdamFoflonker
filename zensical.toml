@@ -344,7 +344,7 @@ link = "https://www.instagram.com/adamfoflonker/"
 # Email
 [[project.extra.social]]
 icon = "fontawesome/solid/paper-plane"
-link = "mailto:adam.foflonker@gmail.com"
+link = "mailto:adam@adamfoflonker.com"
 
 # Hide the Zensical generator message
 [project.extra]
