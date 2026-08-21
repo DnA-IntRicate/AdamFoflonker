@@ -20,6 +20,6 @@ Under the following conditions:
 
 For the full legal text, see [LICENSE](LICENSE) or visit [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
-> If you would like to use any of this content for comercial use, remix and transform, or just get in touch with me, please feel free to contact me at: <adam.foflonker@gmail.com>.
+> If you would like to use any of this content for comercial use, remix and transform, or just get in touch with me, please feel free to contact me at: <adam@adamfoflonker.com> or <adam.foflonker@intrynzic.com>.
 
 ---
